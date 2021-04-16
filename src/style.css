@@ -1,1 +1,7 @@
-/* styles go here */
+.siv{
+    display: block;
+    padding: 5px;
+}
+.one{
+    margin-top: 20px;
+}

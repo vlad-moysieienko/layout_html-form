@@ -1,7 +1,13 @@
-.siv{
-    display: block;
-    padding: 5px;
+.one:not(:last-child) {
+  display: block;
+  margin-bottom: 10px;
 }
-.one{
-    margin-top: 20px;
+
+.fieldset {
+  margin-bottom: 20px;
+}
+
+.one.two {
+  display: inline-block;
+  margin-bottom: 0;
 }

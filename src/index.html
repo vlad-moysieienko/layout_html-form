@@ -11,99 +11,93 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
-      <fieldset>
-      <legend>Personal information</legend>
-      <div class="siv"> <label for="">Surname:</label>
-        <input type="text"></div>
-     
-        <div class="siv"> <label for="">Name:</label>
-          <input type="text"></div>
-
-          <div class="siv"> <label for="">How old are you:</label>
-            <input type="number" value="12" min="12" max="100"></div>
-
-            <div class="siv"> <label for="" >Full date of birth:</label>
-              <input type="date" placeholder="mm/dd/yyy"></div>
-
-             <div class="siv"> <label for="scales">I accept the term of the agreement</label>
-              <input type="checkbox" id="scales" name="accept"></div>
-      </fieldset>
-
-
-      <fieldset class="one">
-        <legend>Registration</legend>
-        <div class="siv"> <label for="">E-mail:</label>
-          <input type="email" placeholder="email@example.com"></div>
-
-          <div class="siv"> <label for="">Password:</label>
-            <input type="password"></div>
-
-      </fieldset>
-  
-<fieldset class="one">
-  <legend>An interesting fact about you!</legend>
-  <div class="siv">
-    <label>Do you love cats?</label>
-    <input type="radio" id="yes" name="drone" value="huey">
-    <label for="huey">Yes</label>
-    <input type="radio" id="yes" name="drone" value="huey">
-    <label for="huey">No</label>
-  </div>
-
-  <div class="siv">
-    <label for="head">What is your favorite color?</label>
-    <input type="color" id="head" name="head"
-           value="black">
-    
-</div>
-
-
-<div class="siv">
-  <label for="appt">What time do you go to bed?</label>
-
-<input type="time" id="appt" name="appt">
-</div>
-
-<div class="siv">
-  <label for="Car">What are your favourite brand of cars?</label>
-  <select name="Car" id="Car" multiple>
-    <option value="BMW">BMW</option>
-    <option value="Audi">Audi</option>
-    <option value="Lada">Lada</option>
-  </select>
-</div>
-
-<div class="siv"><label for="vol">How do you rate our work?</label>
-  <input type="range" id="vol"  min="0" max="100" value="0">
-</fieldset> 
-</div>
-
-     
-
-<fieldset class="one">
-  <legend>Additional info:</legend>
-
-  <div class="siv">
-
-    <label for="vol">Comments:</label>
-    <textarea name="message" rows="2" cols="20"></textarea>
-
-  </div>
-
-  <div class="siv">
-    <label for="appt">Would do you recommend us?</label>
-  
-  <select name="reccomend" id="reccomend">
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-  </select>
-  </div>
-
-</fieldset>
-<button class="one" type="submit">Submit</button>
-      </form>
-  
     <script type="text/javascript" src="./main.js"></script>
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST"
+      onsubmit="onSubmit()">
+      <fieldset class="fieldset">
+        <legend>Personal information</legend>
+        <label class="one" for="surname">Surname:
+          <input type="text" name="surname"
+            id="surname" autocomplete="off">
+        </label>
+        <label class="one" for="name">Name:
+          <input type="text" name="name"
+            id="name">
+        </label>
+        <label class="one" for="years">How old are You?
+          <input type="number" name="years"
+            id="years"
+            min="12"
+            max="100"
+            value="12">
+        </label>
+        <label class="one" for="name1" >Full date of birth:</label>
+        <input type="date" name="date"
+            id="name1">
+        <label class="one" for="accept">I accept the term of the agreement
+          <input type="checkbox" id="accept"
+            name="accept" required>
+        </label>
+      </fieldset>
+      <fieldset class="fieldset">
+        <legend>Registration</legend>
+        <label class="one" for="email">E-mail:
+          <input type="email" name="email"
+            id="email"
+            placeholder="email@example.com"
+            required>
+        </label>
+        <label class="one" for="password">Password:
+          <input type="password" name="password"
+            id="password" minlength="8"
+            maxlength="32">
+        </label>
+      </fieldset>
+      <fieldset class="fieldset">
+        <legend>An interesting fact about you!</legend>
+    Do you love cats?
+        <label class="one two" for="cats2">
+          <input type="radio" id="cats2"
+            name="cats" value="yes">
+    Yes </label>
+        <label class="one two" for="cats">
+          <input type="radio" id="cats"
+            name="cats1">
+    No  </label>
+        <label class="one" for="color">What is your favorite color?</label>
+        <input type="color" id="color"
+          name="color"
+           value="black">
+        <label for="appt">What time do you go to bed?</label>
+        <input type="time" id="appt"
+          name="appt">
+        <label class="one" for="Car">What are your favorite brands of cars?</label>
+        <select name="Car" id="Car"
+          multiple>
+          <option value="BMW">BMW</option>
+          <option value="Audi">Audi</option>
+          <option value="Lada">Lada</option>
+        </select>
+        <label class="one" for="vol">How do you rate our work?
+        </label>
+        <input type="range" id="vol"
+          min="0" max="100"
+          value="1">
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Additional info:</legend>
+        <label class="one" for="vol">Comments:</label>
+        <textarea name="message" rows="2"
+          cols="20">
+        </textarea>
+        <label class="one" for="appt">Would you recomend us?</label>
+        <select name="reccomend" id="reccomend">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </fieldset>
+      <button  type="submit">Submit</button>
+    </form>
   </body>
 </html>
